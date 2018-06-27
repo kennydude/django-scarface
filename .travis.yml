@@ -3,7 +3,7 @@ language: python
 python:
   - "3.6"
 
-services: postgres
+services: postgresql
 
 env:
   global:
@@ -12,6 +12,7 @@ env:
     - BUILD_ON_TRAVIS=true
   matrix:
     - DJANGO=1.8 DB=postgres
+    - DJANGO=2.0 DB=postgres
 
 #commands to install dependencies
 install:
